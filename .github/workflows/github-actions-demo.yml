@@ -12,14 +12,14 @@ jobs:
       - name: Hello world
         run: 
           | 
-            echo "Hello w2orld from $GITHUB_BASE_REF"
+            echo "Hello w2o3rld from $GITHUB_BASE_REF"
             echo "Hello wor2ld from $GITHUB_HEAD_REF"
             echo "${{ github.event.pull_request.base.ref }}"
             echo "${{ github.event.pull_request.head.ref }}"
-            
-            $WorkflowName =  ${{ github.event.pull_request.head.ref }}.Split("/")[0]
-            $branchName =  ${{ github.event.pull_request.head.ref }}.Split("/")[1]
-            echo "$WorkflowName"
+            $sourceBranch = "${{ github.event.pull_request.head.ref }}"
+            #$WorkflowName =  ${{ github.event.pull_request.head.ref }}.Split("/")[0]
+            #$branchName =  ${{ github.event.pull_request.head.ref }}.Split("/")[1]
+            echo "$sourceBranch"
             echo "$branchName"
             
         

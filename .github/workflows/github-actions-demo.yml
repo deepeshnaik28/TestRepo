@@ -16,8 +16,7 @@ jobs:
             echo "Hello wor2ld from $GITHUB_HEAD_REF"
             echo "${{ github.event.pull_request.base.ref }}"
             echo "${{ github.event.pull_request.head.ref }}"
-            $sourcebranch = ${{ github.event.pull_request.head.ref }}
-            echo "$sourcebranch"
+            
             $WorkflowName =  ${{ github.event.pull_request.head.ref }}.Split("/")[0]
             $branchName =  ${{ github.event.pull_request.head.ref }}.Split("/")[1]
             echo "$WorkflowName"

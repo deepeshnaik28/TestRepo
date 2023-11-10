@@ -18,8 +18,8 @@ jobs:
             echo "${{ github.event.pull_request.head.ref }}"
             $sourcebranch = ${{ github.event.pull_request.head.ref }}
             echo "$sourcebranch"
-            $WorkflowName =  $sourcebranch.Split("/")[0]
-            $branchName =  $sourcebranch.Split("/")[1]
+            $WorkflowName =  ${{ github.event.pull_request.head.ref }}.Split("/")[0]
+            $branchName =  ${{ github.event.pull_request.head.ref }}.Split("/")[1]
             echo "$WorkflowName"
             echo "$branchName"
             

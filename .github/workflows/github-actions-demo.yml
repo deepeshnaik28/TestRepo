@@ -19,4 +19,3 @@ jobs:
             echo "Hello world from $GITHUB_BASE_REF"
             echo "Hello world from GITHUB_HEAD_REF"
         
-      

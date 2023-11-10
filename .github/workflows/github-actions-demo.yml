@@ -13,5 +13,6 @@ jobs:
         run: 
           | 
             echo "Hello w2orld from $GITHUB_BASE_REF"
-            echo "Hello wor2ld from GITHUB_HEAD_REF"
+            echo "Hello wor2ld from $GITHUB_HEAD_REF"
+            echo "${{ github.event.pull_request.base.ref }}"
         

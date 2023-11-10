@@ -7,7 +7,7 @@ on:
    types: [closed]
 jobs:
   Explore-GitHub-Actions:
-    runs-on: ubantu-latest
+    runs-on: Windows-latest
     steps:
       - name: Hello world
         run: 

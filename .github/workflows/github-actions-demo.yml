@@ -1,10 +1,9 @@
 name: GitHub Actions Demo
 run-name: GitHub Actions Workflow new 23🚀
 on: 
- pull_request:
+ push:
    branches:
-     - main
-   types: [closed]
+     - release/2.0.2
 jobs:
   Explore-GitHub-Actions:
     runs-on: Windows-latest
@@ -16,11 +15,15 @@ jobs:
             echo "Hello wor2ld from $GITHUB_HEAD_REF"
             echo "${{ github.event.pull_request.base.ref }}"
             echo "${{ github.event.pull_request.head.ref }}"
-            $sourceBranch = "${{ github.event.pull_request.head.ref }}"
-            $destBranch = "${{ github.event.pull_request.base.ref }}"
-            $WorkflowName =  $sourceBranch.Split("/")[0]
-            $branchName =  $sourceBranch.Split("/")[1]
-            echo "$sourceBranch"
-            echo "$destBranch"
+            echo "OUTPUT_VALUE=123" >> $GITHUB_ENV
             
-        
+  Pass-Variable:
+     needs: Explore-GitHub-Actions
+     runs-on: Windows-latest
+     steps:
+      - name: Receive-Variable
+        run: 
+          | 
+            echo "Hello w2o3rld from $GITHUB_BASE_REF"
+            echo "Hello wor2ld from $GITHUB_HEAD_REF"
+            echo "Output from Explore-GitHub-Actions = $OUTPUT_VALUE"

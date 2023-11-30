@@ -9,10 +9,10 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: Windows-latest
     steps:
-      - name: Hello world
+      - name: Make runner busy
         run: 
           | 
             echo "Runner Sleeping...."
-            sleep 300
+            sleep 50
             
         

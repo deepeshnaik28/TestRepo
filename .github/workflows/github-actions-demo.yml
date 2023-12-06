@@ -9,7 +9,7 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: Windows-latest
     steps:
-      - name: Hello world
+      - name: Hello world1
         run: 
           | 
             echo "Hello w2orld from $GITHUB_BASE_REF"

@@ -1,6 +1,6 @@
 name: Starter Workflow Demo
 
-on: [push]
+on: [pull]
 
 jobs:
   build:

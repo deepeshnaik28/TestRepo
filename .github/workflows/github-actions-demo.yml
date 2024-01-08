@@ -20,8 +20,10 @@ jobs:
             do
             echo "Runner is sleeping"
             sleep 2
+            echo $x
             if [ $x -gt 5 ]
             then
+            ((x--))
             break
             fi
             done

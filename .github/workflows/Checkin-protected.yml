@@ -23,8 +23,8 @@ jobs:
             echo $x
             if [ $x -gt 5 ]
             then
-            ((x--))
             break
+            ((x--))
             fi
             done
             

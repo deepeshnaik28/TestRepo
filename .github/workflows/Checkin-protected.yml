@@ -19,12 +19,12 @@ jobs:
             while true
             do
             echo "Runner is sleeping"
+            ((x--))
             sleep 2
             echo $x
             if [ $x -gt 20 ]
             then
             break
-            ((x--))
             fi
             done
             

@@ -1,5 +1,5 @@
-name: GitHub Protected push
-run-name: GitHub Actions Workflow new 23🚀
+name: GitHub Actions Demo
+run-name: GitHub Actions Workflow new 25🚀
 on: 
  push:
    branches:
@@ -7,10 +7,26 @@ on:
    
 jobs:
   Explore-GitHub-Actions:
-    runs-on: Windows-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Make runner busy
         run: 
           | 
-            echo "Runner Sleeping...."
+            #echo "Runner Sleeping...."
             #sleep 50
+            x=10
+
+            while true
+            do
+            echo "Runner is sleeping"
+            sleep 2
+            echo $x
+            if [ $x -gt 5 ]
+            then
+            ((x--))
+            break
+            fi
+            done
+            
+            
+        
